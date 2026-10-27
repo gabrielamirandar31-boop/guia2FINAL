@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Pupusería El Salvador</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">Pupusería <span>El Salvador</span></a>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="menu.html">Menú</a>
+            <a href="contacto.html" class="activo">Contacto</a>
+        </nav>
+    </header>
+
+    <section style="padding-bottom: 0;">
+        <div class="wrapper">
+            <span class="eyebrow">Visítanos</span>
+            <h1 style="font-size: 2.8rem;">Te esperamos con las manos en la <em>masa</em></h1>
+        </div>
+    </section>
+
+    <section>
+        <div class="wrapper contacto-grid">
+
+            <div class="info-contacto">
+                <div class="item">
+                    <div class="icono">📍</div>
+                    <div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 4px;">Dirección</h3>
+                        <p>Barrio San Nicolás, 3ª Calle Poniente, San Miguel, El Salvador</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="icono">🕒</div>
+                    <div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 4px;">Horario</h3>
+                        <p>Lunes a domingo: 7:00 a.m. – 8:00 p.m.</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="icono">📞</div>
+                    <div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 4px;">Teléfono</h3>
+                        <p>(503) 2661-0000</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="icono">✉️</div>
+                    <div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 4px;">Correo</h3>
+                        <p>contacto@pupuseriaelsalvador.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <form>
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" required>
+
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Escríbenos tu consulta, reservación o comentario..." required></textarea>
+
+                <button type="submit" class="btn btn-primario" style="border: none; width: 100%;">Enviar mensaje</button>
+            </form>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>Pupusería El Salvador &middot; San Miguel, El Salvador</p>
+        <div class="redes">
+            <a href="index.html">Inicio</a>
+            <a href="menu.html">Menú</a>
+        </div>
+    </footer>
+
+</body>
+</html>

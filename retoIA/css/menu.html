@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú | Pupusería El Salvador</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">Pupusería <span>El Salvador</span></a>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="menu.html" class="activo">Menú</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <section style="padding-bottom: 0;">
+        <div class="wrapper">
+            <span class="eyebrow">Nuestra carta</span>
+            <h1 style="font-size: 2.8rem;">Menú del <em>día</em></h1>
+            <p style="max-width: 520px;">Todo hecho a mano, con maíz recién molido y el sabor de siempre.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="wrapper">
+
+            <div class="menu-categoria fade-in-scroll">
+                <h2>Pupusas</h2>
+
+                <div class="menu-item">
+                    <div>
+                        <span class="nombre">De queso</span>
+                        <span class="desc">Queso fresco derretido en cada bocado</span>
+                    </div>
+                    <span class="precio">$0.90</span>
+                </div>
+
+                <div class="menu-item">
+                    <div>
+                        <span class="nombre">De frijol con queso</span>
+                        <span class="desc">Frijol refrito casero combinado con queso</span>
+                    </div>
+                    <span class="precio">$1.00</span>
+                </div>
+
+                <div class="menu-item">
+                    <div>
+                        <span class="nombre">Revueltas</span>
+                        <span class="desc">Queso, frijol y chicharrón molido</span>
+                    </div>
+                    <span class="precio">$1.10</span>
+                </div>
+
+                <div class="menu-item">
+                    <div>
+                        <span class="nombre">De chicharrón</span>
+                        <span class="desc">Chicharrón molido finamente sazonado</span>
+                    </div>
+                    <span class="precio">$1.00</span>
+                </div>
+
+                <div class="menu-item">
+                    <div>
+                        <span class="nombre">De ayote con queso</span>
+                        <span class="desc">Ayote sazonado, opción más ligera</span>
+                    </div>
+                    <span class="precio">$1.10</span>
+                </div>
+
+                <div class="menu-item">
+                    <div>
+                        <span class="nombre">De arroz con queso</span>
+                        <span class="desc">Masa de arroz, textura suave y ligera</span>
+                    </div>
+                    <span class="precio">$1.15</span>
+                </div>
+            </div>
+
+            <div class="menu-categoria fade-in-scroll">
+                <h2>Acompañamientos</h2>
+
+                <div class="menu-item">
+                    <div>
+                        <span class="nombre">Curtido casero</span>
+                        <span class="desc">Repollo, zanahoria y vinagre, hecho al día</span>
+                    </div>
+                    <span class="precio">Incluido</span>
+                </div>
+
+                <div class="menu-item">
+                    <div>
+                        <span class="nombre">Salsa de tomate</span>
+                        <span class="desc">Salsa roja tradicional, ligeramente picante</span>
+                    </div>
+                    <span class="precio">Incluido</span>
+                </div>
+
+                <div class="menu-item">
+                    <div>
+                        <span class="nombre">Chicharrón extra</span>
+                        <span class="desc">Porción adicional para acompañar</span>
+                    </div>
+                    <span class="precio">$0.75</span>
+                </div>
+            </div>
+
+            <div class="menu-categoria fade-in-scroll">
+                <h2>Bebidas</h2>
+
+                <div class="menu-item">
+                    <div>
+                        <span class="nombre">Horchata de morro</span>
+                        <span class="desc">Bebida tradicional con canela</span>
+                    </div>
+                    <span class="precio">$1.25</span>
+                </div>
+
+                <div class="menu-item">
+                    <div>
+                        <span class="nombre">Ensalada (fresco de frutas)</span>
+                        <span class="desc">Fresco de temporada, endulzado natural</span>
+                    </div>
+                    <span class="precio">$1.00</span>
+                </div>
+
+                <div class="menu-item">
+                    <div>
+                        <span class="nombre">Café de olla</span>
+                        <span class="desc">Café salvadoreño colado, servido caliente</span>
+                    </div>
+                    <span class="precio">$0.85</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>Pupusería El Salvador &middot; San Miguel, El Salvador</p>
+        <div class="redes">
+            <a href="index.html">Inicio</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+    </footer>
+
+    <script>
+        const elementos = document.querySelectorAll('.fade-in-scroll');
+        const observador = new IntersectionObserver((entradas) => {
+            entradas.forEach(entrada => {
+                if (entrada.isIntersecting) {
+                    entrada.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.15 });
+
+        elementos.forEach(el => observador.observe(el));
+    </script>
+
+</body>
+</html>

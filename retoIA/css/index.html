@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pupusería El Salvador | San Miguel</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">Pupusería <span>El Salvador</span></a>
+        <nav>
+            <a href="index.html" class="activo">Inicio</a>
+            <a href="menu.html">Menú</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="wrapper">
+            <span class="eyebrow">San Miguel, El Salvador</span>
+            <h1>Sabor de casa, hechas al <em>momento</em></h1>
+            <p>Pupusas artesanales, curtido casero y el calor de la cocina salvadoreña, todos los días desde 1998.</p>
+            <div class="hero-botones">
+                <a href="menu.html" class="btn btn-primario">Ver el menú</a>
+                <a href="contacto.html" class="btn btn-secundario">Cómo llegar</a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="wrapper">
+            <span class="eyebrow">Nuestra historia</span>
+            <h2>Tres generaciones amasando <em>tradición</em></h2>
+            <p style="max-width: 640px;">
+                Pupusería El Salvador nació en el corazón de San Miguel como un pequeño puesto familiar.
+                Hoy seguimos preparando cada pupusa a mano, con maíz molido diariamente y recetas que
+                se han pasado de abuela a madre a hija. Nuestro compromiso es simple: que cada plato
+                sepa igual que el de casa.
+            </p>
+        </div>
+    </section>
+
+    <section class="seccion-alt">
+        <div class="wrapper">
+            <span class="eyebrow">Lo más pedido</span>
+            <h2>Platillos destacados</h2>
+            <div class="grid-3">
+                <div class="tarjeta fade-in-scroll">
+                    <p class="numero">01</p>
+                    <h3>Pupusas revueltas</h3>
+                    <p>Queso, frijol y chicharrón en una sola tortilla, doradita y crujiente por fuera.</p>
+                </div>
+                <div class="tarjeta fade-in-scroll">
+                    <p class="numero">02</p>
+                    <h3>Curtido casero</h3>
+                    <p>Repollo fermentado con zanahoria y un toque de vinagre, hecho fresco cada mañana.</p>
+                </div>
+                <div class="tarjeta fade-in-scroll">
+                    <p class="numero">03</p>
+                    <h3>Horchata de morro</h3>
+                    <p>Bebida tradicional preparada con semilla de morro tostada y canela.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="wrapper">
+            <div class="testimonio fade-in-scroll">
+                <p>"Las mejores pupusas de San Miguel, sin duda. Se siente como comer en casa de mi abuela."</p>
+                <span>— Claudia R., clienta desde 2015</span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Pupusería El Salvador &middot; San Miguel, El Salvador</p>
+        <div class="redes">
+            <a href="contacto.html">Contacto</a>
+            <a href="menu.html">Menú</a>
+        </div>
+    </footer>
+
+    <script>
+        const elementos = document.querySelectorAll('.fade-in-scroll');
+        const observador = new IntersectionObserver((entradas) => {
+            entradas.forEach(entrada => {
+                if (entrada.isIntersecting) {
+                    entrada.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        elementos.forEach(el => observador.observe(el));
+    </script>
+
+</body>
+</html>

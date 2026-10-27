@@ -1,0 +1,209 @@
+:root {
+    --color-fondo: #faf3e7;
+    --color-superficie: #f2e8d5;
+    --color-superficie-alt: #ede0c8;
+    --color-acento: #c1663b;        
+    --color-acento-suave: #e0a97e;
+    --color-texto: #3a2e26;
+    --color-texto-tenue: #7a6a5c;
+    --color-borde: #ddc9a8;
+
+    --fuente-titulos: "Playfair Display", serif;
+    --fuente-texto: "Poppins", sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: var(--fuente-texto);
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+}
+
+.hero-bio {
+    text-align: center;
+    padding: 70px 20px;
+    background: linear-gradient(160deg, var(--color-superficie-alt), var(--color-fondo));
+}
+
+.foto-perfil {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--color-acento);
+    box-shadow: 0 12px 30px rgba(193, 102, 59, 0.35);
+    margin-bottom: 24px;
+}
+
+.hero-bio h1 {
+    font-family: var(--fuente-titulos);
+    font-size: 2.8rem;
+    color: var(--color-texto);
+}
+
+.subtitulo {
+    color: var(--color-texto-tenue);
+    margin-top: 10px;
+    font-style: italic;
+    font-size: 1.05rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 34px;
+    background-color: var(--color-acento);
+    padding: 18px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+nav a {
+    color: #fff8ee;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 4px;
+    transition: border-color 0.25s ease, color 0.25s ease;
+}
+
+nav a:hover {
+    border-bottom-color: #fff8ee;
+    color: #ffffff;
+}
+
+.wrapper {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.bloque { padding: 55px 0; }
+
+.bloque h2 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.7rem;
+    color: var(--color-acento);
+    border-bottom: 2px solid var(--color-borde);
+    padding-bottom: 12px;
+    margin-bottom: 28px;
+    position: relative;
+}
+
+.bloque h2::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background-color: var(--color-acento);
+}
+
+.bloque p {
+    line-height: 1.8;
+    color: var(--color-texto);
+}
+
+.lista-estudios li {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    padding: 16px 18px;
+    border-bottom: 1px solid var(--color-borde);
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.lista-estudios li:nth-child(odd) {
+    background-color: var(--color-superficie);
+}
+
+.lista-estudios li:hover {
+    background-color: var(--color-acento-suave);
+}
+
+.anio {
+    font-weight: 700;
+    color: var(--color-acento);
+    min-width: 120px;
+}
+
+.galeria {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.galeria figure {
+    flex: 1 1 calc(50% - 11px);
+    min-width: 200px;
+    text-align: center;
+    background-color: var(--color-superficie);
+    padding: 12px;
+    border-radius: 14px;
+    box-shadow: 0 10px 22px rgba(58, 46, 38, 0.12);
+    transition: transform 0.25s ease;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+.galeria figure {
+    text-align: center;
+    background-color: var(--color-superficie);
+    padding: 12px;
+    border-radius: 14px;
+    box-shadow: 0 10px 22px rgba(174, 107, 62, 0.12);
+    transition: transform 0.25s ease;
+}
+
+.galeria figure:hover {
+    transform: translateY(-6px);
+}
+
+.galeria img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.galeria figcaption {
+    margin-top: 12px;
+    color: var(--color-texto-tenue);
+    font-size: 0.9rem;
+    font-style: italic;
+}
+.enlaces-contacto a {
+    display: inline-block;
+    margin-right: 22px;
+    padding: 8px 18px;
+    border: 2px solid var(--color-acento);
+    border-radius: 30px;
+    color: var(--color-acento);
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.enlaces-contacto a:hover {
+    background-color: var(--color-acento);
+    color: #fff8ee;
+}
+
+footer {
+    text-align: center;
+    padding: 26px;
+    color: var(--color-texto-tenue);
+    font-size: 0.8rem;
+    border-top: 1px solid var(--color-borde);
+    margin-top: 40px;
+    background-color: var(--color-superficie);
+}
