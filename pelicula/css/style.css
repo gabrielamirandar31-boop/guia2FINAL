@@ -244,3 +244,40 @@ main > .bloque:first-child .sinopsis-texto > p:first-child::first-line {
     text-decoration: underline;
     text-decoration-color: var(--color-dorado);
 }
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 88px 16px 56px;
+    }
+
+    .hero-contenido,
+    .wrapper {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2.6rem;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    nav > a {
+        padding: 14px 12px;
+        font-size: 0.7rem;
+    }
+
+    .sinopsis-contenido {
+        flex-direction: column;
+    }
+
+    .sinopsis-contenido img {
+        width: 100%;
+    }
+
+    .ficha > div {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+}
